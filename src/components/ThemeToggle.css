@@ -1,0 +1,46 @@
+/* ThemeToggle.css (Simplificado) */
+.theme-toggle-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .theme-toggle-button.sun {
+    background-color: #FFD54F;
+    color: #5D4037;
+  }
+  
+  .theme-toggle-button.moon {
+    background-color: #424242;
+    color: #ECEFF1;
+  }
+  
+  .theme-toggle-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .theme-toggle-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .theme-toggle-button {
+      padding: 6px 12px;
+      font-size: 0.85rem;
+    }
+    
+    .theme-toggle-wrapper {
+      margin-top: 15px;
+    }
+  }

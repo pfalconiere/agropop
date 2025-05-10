@@ -1,0 +1,58 @@
+/* Dashboard.css */
+.dashboard {
+  padding: 20px 0;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-status {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mode-indicator {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.day-mode {
+  background-color: #FFF9C4;
+  color: #F57F17;
+}
+
+.night-mode {
+  background-color: #263238;
+  color: #B0BEC5;
+}
+
+/* Para o modo escuro */
+.dashboard.dark-mode .day-mode {
+  background-color: #1a1a1a;
+  color: #FFC107;
+}
+
+.dashboard.dark-mode .night-mode {
+  background-color: #1a237e;
+  color: #90CAF9;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mode-indicator {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

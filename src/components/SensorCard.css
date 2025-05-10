@@ -1,0 +1,318 @@
+/* SensorCard.css com indicadores de qualidade */
+.sensor-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  border-left: 5px solid;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.sensor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.sensor-icon {
+  margin-right: 20px;
+}
+
+.sensor-info {
+  flex: 1;
+}
+
+.sensor-info h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.sensor-value {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.unit {
+  font-size: 1.2rem;
+  margin-left: 5px;
+  opacity: 0.7;
+}
+
+/* Estilos por qualidade */
+.sensor-card.quality-otimo {
+  border-width: 5px;
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.sensor-card.quality-bom {
+  border-width: 5px;
+  background-color: rgba(139, 195, 74, 0.1);
+}
+
+.sensor-card.quality-regular {
+  border-width: 5px;
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+.sensor-card.quality-ruim {
+  border-width: 5px;
+  background-color: rgba(244, 67, 54, 0.1);
+  animation: pulse-danger 1.5s infinite;
+}
+
+.quality-indicator {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  width: fit-content;
+}
+
+.quality-indicator.quality-otimo {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #388E3C;
+}
+
+.quality-indicator.quality-bom {
+  background-color: rgba(139, 195, 74, 0.1);
+  color: #689F38;
+}
+
+.quality-indicator.quality-regular {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: #FFA000;
+}
+
+.quality-indicator.quality-ruim {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #D32F2F;
+}
+
+/* Modo escuro */
+.sensor-card.dark-mode {
+  background-color: #2d2d2d;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sensor-card.dark-mode h2 {
+  color: #e0e0e0;
+}
+
+.sensor-card.dark-mode.quality-otimo {
+  background-color: rgba(76, 175, 80, 0.15);
+}
+
+.sensor-card.dark-mode.quality-bom {
+  background-color: rgba(139, 195, 74, 0.15);
+}
+
+.sensor-card.dark-mode.quality-regular {
+  background-color: rgba(255, 193, 7, 0.15);
+}
+
+.sensor-card.dark-mode.quality-ruim {
+  background-color: rgba(244, 67, 54, 0.15);
+}
+
+.sensor-card.dark-mode .quality-indicator.quality-otimo {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #81C784;
+}
+
+.sensor-card.dark-mode .quality-indicator.quality-bom {
+  background-color: rgba(139, 195, 74, 0.2);
+  color: #AED581;
+}
+
+.sensor-card.dark-mode .quality-indicator.quality-regular {
+  background-color: rgba(255, 193, 7, 0.2);
+  color: #FFD54F;
+}
+
+.sensor-card.dark-mode .quality-indicator.quality-ruim {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #E57373;
+}
+
+/* Limites e Barra de Progresso */
+.limites-progress {
+  margin-top: 15px;
+}
+
+.limites-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.sensor-card.dark-mode .limites-range {
+  color: #bbb;
+}
+
+.progress-container {
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: visible;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.sensor-card.dark-mode .progress-container {
+  background-color: #444;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 5px;
+  transition: width 0.5s ease;
+  position: relative;
+}
+
+.sensor-card.quality-ruim .progress-bar {
+  background-color: #f44336;
+}
+
+.sensor-card.quality-regular .progress-bar {
+  background-color: #ff9800;
+}
+
+.sensor-card.quality-bom .progress-bar {
+  background-color: #8BC34A;
+}
+
+.sensor-card.quality-otimo .progress-bar {
+  background-color: #4CAF50;
+}
+
+.sensor-card.dark-mode .progress-bar {
+  background-color: #66BB6A;
+}
+
+.sensor-card.dark-mode.quality-ruim .progress-bar {
+  background-color: #E57373;
+}
+
+.sensor-card.dark-mode.quality-regular .progress-bar {
+  background-color: #FFB74D;
+}
+
+.sensor-card.dark-mode.quality-bom .progress-bar {
+  background-color: #AED581;
+}
+
+.sensor-card.dark-mode.quality-otimo .progress-bar {
+  background-color: #81C784;
+}
+
+/* Marcadores de nível na barra de progresso */
+.nivel-marker {
+  position: absolute;
+  width: 3px;
+  height: 20px;
+  top: -5px;
+  transform: translateX(-50%);
+  border-radius: 1px;
+  z-index: 1;
+}
+
+.nivel-marker::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: inherit;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nivel-marker.nivel-otimo {
+  background-color: #4CAF50;
+}
+
+.nivel-marker.nivel-bom {
+  background-color: #8BC34A;
+}
+
+.nivel-marker.nivel-regular {
+  background-color: #FFC107;
+}
+
+.sensor-card.dark-mode .nivel-marker.nivel-otimo {
+  background-color: #81C784;
+}
+
+.sensor-card.dark-mode .nivel-marker.nivel-bom {
+  background-color: #AED581;
+}
+
+.sensor-card.dark-mode .nivel-marker.nivel-regular {
+  background-color: #FFD54F;
+}
+
+/* Animações de pulsação */
+@keyframes pulse-danger {
+  0% {
+    box-shadow: 0 3px 10px rgba(244, 67, 54, 0.3);
+  }
+  50% {
+    box-shadow: 0 3px 20px rgba(244, 67, 54, 0.5);
+  }
+  100% {
+    box-shadow: 0 3px 10px rgba(244, 67, 54, 0.3);
+  }
+}
+
+@media (max-width: 768px) {
+  .sensor-card {
+    padding: 15px;
+  }
+  
+  .value {
+    font-size: 2rem;
+  }
+  
+  .unit {
+    font-size: 1rem;
+  }
+  
+  .quality-indicator {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+  
+  .limites-range {
+    font-size: 0.7rem;
+  }
+  
+  .nivel-marker {
+    height: 14px;
+    width: 2px;
+  }
+  
+  .nivel-marker::after {
+    width: 8px;
+    height: 8px;
+    top: -4px;
+  }
+}

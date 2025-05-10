@@ -1,0 +1,117 @@
+/* Footer.css */
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 30px 20px;
+  margin-top: 40px;
+  transition: all 0.3s ease;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-members {
+  flex: 1;
+}
+
+.team-members h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+}
+
+.team-members ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.team-members li {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.team-members li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 15px;
+}
+
+.copyright {
+  text-align: right;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Estilo para modo escuro */
+.footer.dark-mode {
+  background-color: #0D1B2A;
+}
+
+.footer.dark-mode .team-members li {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.footer.dark-mode .team-members li:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Ajustes para o botão de tema no footer */
+.footer .theme-toggle-button {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer .theme-toggle-button.sun {
+  background-color: rgba(255, 213, 79, 0.9);
+}
+
+.footer .theme-toggle-button.moon {
+  background-color: rgba(66, 66, 66, 0.9);
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .team-members ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .team-members li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .footer-right {
+    align-items: center;
+    width: 100%;
+  }
+  
+  .copyright {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .footer {
+    padding: 20px 15px;
+    margin-top: 20px;
+  }
+}
